@@ -70,6 +70,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>questions-service</finalName>
 	</build>
 
 </project>
