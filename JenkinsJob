@@ -11,8 +11,8 @@ pipeline{
         }
         stage("Git Checkout"){
             steps{
-                git 'https://github.com/erabhijimi/Questions-Service-ForAWSDeployment.git'
-                echo "Checkout completed.."
+                //git 'https://github.com/erabhijimi/Questions-Service-ForAWSDeployment.git'
+                echo "Checkout Already completed.."
             }
         }
         stage("Maven Build"){
