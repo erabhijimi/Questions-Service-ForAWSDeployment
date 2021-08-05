@@ -1,0 +1,25 @@
+pipeline{
+    agent any
+    environment{
+        PATH = "C:/Program Files/apache-maven-3.6.3/bin:$PATH"
+    }
+    stages{
+        stage("Startup"){
+            steps{
+                echo "Welcome Abhijit..."
+            }
+        }
+        stage("Git Checkout"){
+            steps{
+                git 'https://github.com/erabhijimi/Questions-Service-ForAWSDeployment.git'
+                echo "Checkout completed.."
+            }
+        }
+        stage("Maven Build"){
+            steps{
+                echo "Build Project started..."
+                bat 'mvn clean install'
+            }
+        }
+    }
+}
