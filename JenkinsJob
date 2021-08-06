@@ -25,7 +25,7 @@ pipeline{
                 sshagent(['Dev-Linux-Box']) {
                     // some block
                     sh """      //For Multiple lines
-                        scp -o StrictHostKeyChecking=no target\questions-service.jar ec2-user@ec2-13-232-119-24.ap-south-1.compute.amazonaws.com:/opt/        //Copy jar from here to the EC2 box
+                        scp -o StrictHostKeyChecking=no target/questions-service.jar ec2-user@ec2-13-232-119-24.ap-south-1.compute.amazonaws.com:/opt/        //Copy jar from here to the EC2 box
                         
                     """
                 }
